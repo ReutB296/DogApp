@@ -1,0 +1,125 @@
+
+
+   .uploadContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+   }
+  
+   input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+   }
+  
+   .activeBttn {
+    width: 300px;
+    box-sizing: border-box;
+    border: solid 1px white;
+    border-radius: 15px;
+    background: black;
+    color: white;
+    font-size: 24px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: rgba(250, 250, 250, 0.45) 0px 25px 20px -20px;
+    position: relative;
+    bottom: 60px;
+   }
+
+   .diableBttn{
+      width: 300px;
+      box-sizing: border-box;
+      border: solid 1px white;
+      border-radius: 15px;
+      background: gray;
+      color: white;
+      font-size: 24px;
+      margin: auto;
+      padding: 10px;
+      box-shadow: rgba(250, 250, 250, 0.45) 0px 25px 20px -20px;
+      position: relative;
+      bottom: 60px;
+
+   }
+
+   .cardBottom{
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 2.5rem;
+      width: 100%;
+      z-index: -1;
+   }
+
+   
+   .uploadContainer img {
+   border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+    border: transparent;
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: -8%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+   
+  
+   /* ul {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 25px;
+   } */
+
+   .loadingPucStatus{
+      margin-top: 30px;
+      color: green;
+      font-size: 20px;
+   }
+
+   #chartContainer{
+      color: black;
+   }
+
+
+   .cardContainer{
+      position: absolute;
+      margin-top: 80px;
+      display: block;
+   }
+
+   .cardTop{
+      box-shadow: 0 10px 40px rgb(16 30 50 / 8%);
+      border-radius: 2.5rem;
+      white-space: normal;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      height: 700px;
+      width: 500px;
+  
+
+   }
+
+   .resultsContainer{
+      position: absolute;
+      bottom: 0px;
+      left: -10rem;
+   }
+
+   .StartOverBttn{
+   position: absolute;
+   bottom: 40px;
+   }
+
+  

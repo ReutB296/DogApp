@@ -1,0 +1,169 @@
+.home-container{
+background-color: #c78419;
+position: absolute;
+height: 100%;
+width: 100%;
+}
+
+.text-container{
+    position: absolute;
+    top:100px;
+    left:320px;
+}
+
+.text-container h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #ecd313;
+    font-size: 170px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.text-container p{
+    font-size: 30px;
+    color:#fcfaf7;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.home .Classify-container{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: absolute;
+    left: 270px;
+    top:500px;
+    width: fit-content;
+    
+}
+
+.Classify-front{
+    border: 2px solid black;
+    border-radius: 50%;
+    background-image: url('./pic/iconeDog.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 40% 40%;
+    background-color: whitesmoke;
+    width: 210px;
+    height: 210px;
+
+}
+
+.Classify-front, .Classify-back, .memoryCard-front, .memoryCard-back{
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.Classify-back{
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    border-radius: 50%;
+    width: 210px;
+    height: 210px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.Classify-container .Classify-back, .memoryGame-container .memoryCard-back{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.Classify-container .Classify-front, .memoryGame-container .memoryCard-front{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.Classify-container:hover .Classify-back, .memoryGame-container:hover .memoryCard-back{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.Classify-container:hover .Classify-front, .memoryGame-container:hover .memoryCard-front{
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    transition: .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+
+.Classify-back .inner{
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    perspective: inherit;
+    position: absolute;
+    top: 110px;
+    left: 32px;
+    color: black;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+.memoryCard-back .inner{
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    perspective: inherit;
+    position: absolute;
+    top: 110px;
+    left: 2px;
+    color: black;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+   
+
+
+.pic-container{
+    position: absolute;
+    top:70px;
+    right:30px;
+    bottom: 0;
+}
+
+.pic-container img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.home .memoryGame-container{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: absolute;
+    left: 600px;
+    top:500px;
+    width: fit-content;
+    
+}
+
+.memoryCard-front{
+    border: 2px solid black;
+    border-radius: 50%;
+    background-image: url('./pic/playing-cards.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: whitesmoke;
+    width: 210px;
+    height: 210px;
+}
+
+.memoryCard-back{
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 50%;
+    width: 210px;
+    height: 210px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}

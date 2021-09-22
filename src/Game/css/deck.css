@@ -1,0 +1,13 @@
+.deck{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    
+    
+  
+}
+
+

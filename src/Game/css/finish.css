@@ -1,0 +1,12 @@
+.MuiTypography-h6 {
+    font-size: 55px;
+    color: rgb(240, 14, 183);
+    font-weight: 500;
+  
+  }
+
+  .MuiDialogActions-root {
+    display: unset;
+    
+  }
+
