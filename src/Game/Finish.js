@@ -18,12 +18,12 @@ export default function Finish(){
     });
     
     sound.play();
-
+    
     
     const handleRestart= ()=>{
         const shuffledGame = deck.sort(() => Math.random() - 0.5);
         setGame(shuffledGame);
-        <Deck/>
+        // <Deck/>
       }
      
     

@@ -6,12 +6,11 @@ export const CardsContext = React.createContext({
   setGame: () =>{},
   flipedCards: [],
   setflipedCards: () =>{},
-  deck: []
  
 });
 
 export default function CardsProvider({children}) {
-    const [game, setGame] = useState([]);
+    const [game, setGame] = useState([{img: "/dog0.png", id: 0, imgId:"border", isFlipped: true}]);
     const [flipedCards, setflipedCards] = useState([]);
 
  
@@ -50,7 +49,6 @@ export default function CardsProvider({children}) {
         setGame,
         flipedCards,
         setflipedCards,
-        deck
       
     }}>
       {children}

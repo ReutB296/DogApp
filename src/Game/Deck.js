@@ -8,6 +8,8 @@ import Finish from './Finish';
 export default function Deck(){
     const {game} = useContext(CardsContext);
 
+    console.log("game is", game)
+
   
   return(
       <div className="deck">

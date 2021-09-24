@@ -14,7 +14,7 @@ export default function Header(){
         const shuffledGame = deck.sort(() => Math.random() - 0.5);
         setGame(shuffledGame);
         setflipedCards([]);
-        <Deck/>
+        // <Deck/>
     };
 
 

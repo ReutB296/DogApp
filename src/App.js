@@ -11,8 +11,6 @@ import CardsProvider from './Game/CardsContext';
 import Classifier from './Classifier/Classifier.js';
 
 
-
-
 function App() {
   return (
     <Router>
@@ -20,9 +18,11 @@ function App() {
         <Route path="/" exact>
           <Home/>
         </Route>
+
         <Route path="/Classify" exact>
           <Classifier/>
         </Route>
+
         <Route path="/MemoryCardGame" exact>
           <CardsProvider>
           <div className="cardGame-container">
@@ -31,6 +31,7 @@ function App() {
           </div>
           </CardsProvider>
         </Route>
+
         </Switch>
     </Router>
   );

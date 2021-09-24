@@ -18,24 +18,33 @@
    }
   
    .activeBttn {
-    width: 300px;
+    width: 250px;
     box-sizing: border-box;
-    border: solid 1px white;
+    border-bottom: 10px solid dimgray;
     border-radius: 15px;
-    background: black;
-    color: white;
+    background: navajowhite;
+    color: black;
     font-size: 24px;
     margin: auto;
     padding: 10px;
     box-shadow: rgba(250, 250, 250, 0.45) 0px 25px 20px -20px;
     position: relative;
-    bottom: 60px;
+    top: 300px;
    }
 
+   .activeBttn:focus{
+      outline: none;
+   }
+
+   .activeBttn:active{
+      border-bottom: 5px solid dimgray;
+   }
+
+
    .diableBttn{
-      width: 300px;
+      width: 250px;
       box-sizing: border-box;
-      border: solid 1px white;
+      border: 1px solid dimgray;
       border-radius: 15px;
       background: gray;
       color: white;
@@ -44,7 +53,7 @@
       padding: 10px;
       box-shadow: rgba(250, 250, 250, 0.45) 0px 25px 20px -20px;
       position: relative;
-      bottom: 60px;
+      top: 300px;
 
    }
 
@@ -52,7 +61,7 @@
 
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -7px;
       left: 0;
       border-radius: 2.5rem;
       width: 100%;
@@ -113,13 +122,39 @@
 
    .resultsContainer{
       position: absolute;
-      bottom: 0px;
-      left: -10rem;
+      top: 230px;
+      left: -330px;
    }
 
    .StartOverBttn{
    position: absolute;
    bottom: 40px;
    }
+
+   .dogsResults{
+      color: black;
+      font-size: 20px;
+   }
+
+   .backContainer2{
+      position: absolute;
+      left: 100px;
+   }
+
+   .backContainer2 a {
+      text-decoration: none;
+      display: flex;
+      gap: 5px;
+}
+ 
+.backContainer2 a .buttonBack {
+      font-size: 14px;
+      color: black;
+}
+
+.recharts-wrapper{
+   margin-top: 30px;
+}
+
 
   

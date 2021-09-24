@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import  './css/classifier.css';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import {
-  useHistory,
+  useHistory, Link
 } from "react-router-dom";
 import { PieChart, Pie, Cell } from 'recharts';
 
@@ -96,6 +96,12 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
  return (
     <div className="uploadContainer">
+       <div className="backContainer2">
+                <Link to={"/"}>
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" role="presentation"><path d="M18.378 23.369c.398-.402.622-.947.622-1.516 0-.568-.224-1.113-.622-1.515l-8.249-8.34 8.25-8.34a2.16 2.16 0 0 0 .548-2.07A2.132 2.132 0 0 0 17.428.073a2.104 2.104 0 0 0-2.048.555l-9.758 9.866A2.153 2.153 0 0 0 5 12.009c0 .568.224 1.114.622 1.515l9.758 9.866c.808.817 2.17.817 2.998-.021z"></path></svg>
+                    <div className="buttonBack">Back</div>
+                </Link>
+        </div>
         <div className="cardContainer">
             <div className="cardTop">
               { imageUrl && (
@@ -111,6 +117,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
           {results && (
           <div className="resultsContainer" >
+            <div className="dogsResults">The dog you scanned looks like:</div>
 
           <PieChart height={300} width={1200}>
                 <Pie
@@ -147,7 +154,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
           )
         } 
 
-<div class="cardBottom"><svg viewBox="0 0 500 246" fill="#F6F6F7" class="sc-iwsKbI fNVjLn"><path d="M500 67.361L500.0001 246H0V67.361C73.44 24.535 158.8547 0 250 0c91.1453 0 176.56 24.535 250.0001 67.361H500z"></path></svg></div>
+<div class="cardBottom"><svg viewBox="0 0 500 246" fill="#F6F6F7"><path d="M500 67.361L500.0001 246H0V67.361C73.44 24.535 158.8547 0 250 0c91.1453 0 176.56 24.535 250.0001 67.361H500z"></path></svg></div>
           </div>
         </div>
         {results && (

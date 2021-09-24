@@ -30,7 +30,7 @@ export default function Card({
                 } 
             });
             setGame(temp);
-            <Deck/>
+            // <Deck/>
         }
     }
 
@@ -74,7 +74,7 @@ export default function Card({
            
             setflipedCards([]);
             // setGameTimed(temp1);
-            <Deck/>
+            // <Deck/>
         }
     }
 
