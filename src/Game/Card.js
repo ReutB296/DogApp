@@ -16,13 +16,16 @@ export default function Card({
     
     const handleClick = (id, imgId) => {
         console.log("flipedCards" ,flipedCards);
+
         if (!(flipedCards.includes(id))){
             
             const newId = [...flipedCards];
             newId.push(id, imgId);
             setflipedCards(newId);
+
             console.log(newId);
             console.log(flipedCards);
+
             const temp =  [...game];
             temp.map(card => {
                 if (card.id === id){
@@ -42,26 +45,31 @@ export default function Card({
         }
     }, [flipedCards]);
 
-    const setGameTimed = (game) => {
-        setTimeout(() => {
-            setGame(game)
-        }, 400)
-    }
+    // const setGameTimed = (game) => {
+    //     setTimeout(() => {
+    //         setGame(game)
+    //     }, 400)
+    // }
 
     const checkMatch= () => {
         if (flipedCards[1] === flipedCards[3]){ //if there is a match
-            let temp =  [...game];
-            // const cardIndex1 = temp.findIndex(card => card.id == flipedCards[0]);
-            // temp[cardIndex1] = {...temp[cardIndex1], isFlipped: !temp[cardIndex1].isFlipped} 
-            // const cardIndex2 = temp.findIndex(card => card.id == flipedCards[2]);
-            // temp[cardIndex2] = {...temp[cardIndex2], isFlipped: !temp[cardIndex2].isFlipped} 
-            
-            console.log("temp is", temp);
-            temp = temp.filter(card => card.imgId != flipedCards[1]);
-            temp = temp.filter(card => card.imgId != flipedCards[3]);
+              let copiedGame =  [...game];
+         
+              setGame(copiedGame.map( card => {
+                  if (card.id === flipedCards[0] || card.id === flipedCards[2]){
+                      card.isMatch = true;
+                  };
+                  return card;
+              }));
+              
+           
+           
+            // console.log("temp is", temp);
+            // temp = temp.filter(card => card.imgId != flipedCards[1]);
+            // temp = temp.filter(card => card.imgId != flipedCards[3]);
             
             setflipedCards([]);
-            setGameTimed(temp);
+            // setGameTimed(temp);
 
 
         }else{  //if there is no match, flip back
@@ -73,8 +81,7 @@ export default function Card({
             });
            
             setflipedCards([]);
-            // setGameTimed(temp1);
-            // <Deck/>
+            
         }
     }
 

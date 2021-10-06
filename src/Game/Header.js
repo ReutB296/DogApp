@@ -1,7 +1,6 @@
 import {useContext} from 'react';
 import './css/header.css';
 import { CardsContext } from "./CardsContext.js";
-import Deck from './Deck.js';
 import {
     Link,
   } from "react-router-dom";
@@ -14,7 +13,7 @@ export default function Header(){
         const shuffledGame = deck.sort(() => Math.random() - 0.5);
         setGame(shuffledGame);
         setflipedCards([]);
-        // <Deck/>
+       
     };
 
 
