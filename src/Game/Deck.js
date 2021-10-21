@@ -13,7 +13,7 @@ export default function Deck(){
   
   return(
       <div className="deck">
-        {!game.find(card => card.isMatch === false) ? 
+        {!game.find(card => card.isMatch === false) ?  
          <Finish/> :
         game.map((card) => <Card 
         img = {card.img}

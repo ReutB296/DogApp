@@ -1,7 +1,6 @@
 import './css/card.css';
 import React, {useContext, useEffect} from 'react';
 import { CardsContext } from "./CardsContext.js";
-import Deck from './Deck';
 
 export default function Card({
     img,
@@ -33,7 +32,7 @@ export default function Card({
                 } 
             });
             setGame(temp);
-            // <Deck/>
+        
         }
     }
 
@@ -45,11 +44,6 @@ export default function Card({
         }
     }, [flipedCards]);
 
-    // const setGameTimed = (game) => {
-    //     setTimeout(() => {
-    //         setGame(game)
-    //     }, 400)
-    // }
 
     const checkMatch= () => {
         if (flipedCards[1] === flipedCards[3]){ //if there is a match
@@ -61,15 +55,10 @@ export default function Card({
                   };
                   return card;
               }));
-              
-           
-           
-            // console.log("temp is", temp);
-            // temp = temp.filter(card => card.imgId != flipedCards[1]);
-            // temp = temp.filter(card => card.imgId != flipedCards[3]);
+         
             
             setflipedCards([]);
-            // setGameTimed(temp);
+           
 
 
         }else{  //if there is no match, flip back

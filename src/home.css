@@ -167,3 +167,68 @@ width: 100%;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
 }
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .text-container{
+        left: 120px;
+    }
+    
+    .home .Classify-container{
+        left: 100px;
+    }
+
+    .home .memoryGame-container{
+        left: 400px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 599px){
+    .text-container{
+        left: 60px;
+    }
+    
+    .home .Classify-container{
+        left: 30px;
+    }
+
+    .home .memoryGame-container{
+        left: 260px;
+    }
+}
+
+@media screen and  (max-width: 480px){
+    .text-container{
+        left: 10px;
+    }
+
+    .text-container h1{
+        font-size: 9rem;
+    }
+
+    .text-container p{
+        font-size: 2rem;
+    }
+
+    .pic-container{
+        top: initial;
+    }
+
+    .home .Classify-container{
+        left: 10px;
+        top: 400px;
+    }
+
+    .Classify-container .Classify-front, .memoryGame-container .memoryCard-front, .Classify-container .Classify-back, .memoryGame-container .memoryCard-back{
+        width: 150px;
+        height: 150px;
+    }
+
+    .home .memoryGame-container{
+        left: 220px;
+        top: 400px;
+    }
+
+    .Classify-container .Classify-back .inner p, .memoryGame-container .memoryCard-back .inner p{
+        margin-bottom: 5rem;
+    }
+}
